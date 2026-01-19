@@ -6,29 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechWave</title>
 
-    <!-- TAILWIND CSS -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-
-    <!-- GOOGLE FONTS -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- FONT AWESOME CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
-
-
 </head>
 
 <body>
-    <!-- HEADER AREA -->
+
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-logo">
             <a href="#">Tech<span>Wave</span></a>
@@ -43,33 +34,77 @@
         </nav>
 
         <div class="nav-cta">
-            <a href="#" class="btn">Subscribe <i class="fa-solid fa-arrow-right-long"></i></a>
+            <a href="#" class="btn">
+                Subscribe <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
         </div>
 
         <i class="fa-solid fa-bars hamburger"></i>
     </header>
 
-    <!-- HERO SECTION -->
-     <section class="hero">
+    <!-- HERO -->
+    <section class="hero">
         <div class="hero-overlay">
 
-        <div class="circle-wrapper">
-            <img src="./assets/hero-circle.png" class="circle-img">
+            <div class="circle-wrapper">
+                <img src="./assets/hero-circle.png" class="circle-img" alt="Hero Circle">
+                <img src="./assets/microphone.png" class="center-icon" alt="Mic">
+                <span class="badge">NEW</span>
+            </div>
 
-            <img src="./assets/microphone.png" alt="" class="center-icon">
+            <div class="hero-content">
+                <h1 class="hero-title">TechWave</h1>
+
+                <p class="hero-text">
+                    Your daily dose of tech insights, productivity hacks, and personal growth
+                </p>
+
+                <div class="btn-icon">
+                    <a href="#" class="btn hero-btn"> <i class="fa-brands fa-spotify"></i> Listen on Spotify </a>
+                    <a href="#" class="hero-btn-subscribe"> <i class="fa-regular fa-envelope"></i> Subscribe </a>
+                </div>
+            </div>
+
         </div>
-        <span class="badge">NEW</span>
-     </div>
-     </section>
+    </section>
 
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="about-content">
+            <h2>About the Podcast</h2>
+            <p>TechWave is your go-to podcast for staying ahead in the fast-paced world of technology. <br>
+                We break down complex topics into digestible insights, explore productivity strategies that actually
+                work, <br>
+                and share stories of personal growth from industry leaders. <br> <br>
 
+                Join thousands of young professionals and tech enthusiasts who start their day with TechWave.</p>
+        </div>
 
+        <hr>
 
+        <div class="about-stats">
+            <div class="stats-card">
+                <h3>150K+</h3>
+                <p>Monthly Listeners</p>
+            </div>
+            <div class="stats-card">
+                <h3>200+</h3>
+                <p>Episodes Published</p>
+            </div>
+            <div class="stats-card">
+                <h3>4.9★</h3>
+                <p>Average Rating</p>
+            </div>
+            <div class="stats-card">
+                <h3>50+</h3>
+                <p>Industry Experts</p>
+            </div>
 
+        </div>
+    </section>
 
-
-
-
+    <!-- Why Choose TechWave -->
+     
 
 </body>
 
