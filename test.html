@@ -8,110 +8,184 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #12051f;
-  font-family: Arial, sans-serif;
-  color: #fff;
-}
-
-.featured-episodes {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-}
-
-.featured-episodes__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.episode-card {
-  background: #6a0dd1;
-  border-radius: 14px;
-  overflow: hidden;
-  height: 380px;
-  display: flex;
-  flex-direction: column;
-}
-
-.yt-video {
+/* HERO BASE */
+.hero {
   position: relative;
-  height: 50%;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
 }
 
-.yt-video iframe {
+/* BACKGROUND IMAGE */
+.hero-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  border: 0;
-  pointer-events: none;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.play-overlay {
+/* CIRCLE WRAPPER – PERFECT CENTER */
+.hero-circle-wrapper {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  z-index: 2;
-}
-
-.play-overlay span {
-  width: 64px;
-  height: 64px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ffd54d, #ff2d95, #6a0dd1);
-  display: grid;
-  place-items: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-}
-
-.play-overlay span::before {
-  content: "";
-  margin-left: 4px;
-  border-style: solid;
-  border-width: 10px 0 10px 16px;
-  border-color: transparent transparent transparent #fff;
-}
-
-.featured-content {
-  height: 50%;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.featured-content h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.featured-content p {
-  font-size: 0.95rem;
-  line-height: 1.5rem;
-  color: #e0e0e0;
-}
-
-.featured-content-timer {
-  margin-top: auto;              /* pushes to bottom */
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: #00ff88;
-  font-size: 0.9rem;
+  justify-content: center;
 }
+
+/* MAIN CIRCLE IMAGE */
+.circle-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* MICROPHONE OVERLAY */
+.hero-microphone {
+  position: absolute;
+  width: 120px;
+  height: auto;
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff2d55;
+  color: #ffffff;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  margin-top: 520px;
+  padding: 0 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.hero-btn {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn a {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-btn-spotify {
+  background: #1db954;
+  color: #ffffff;
+}
+
+.hero-btn-subscribe {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-circle-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-microphone {
+    width: 90px;
+  }
+
+  .hero-content {
+    margin-top: 320px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-circle-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-content {
+    margin-top: 280px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+}
+
+
+
 </style>
 </head>
 
 <body>
+<section class="hero">
+  <img src="./assets/hero-bg.png" alt="" class="hero-bg">
 
+  <div class="hero-circle-wrapper">
+    <img src="./assets/hero-circle.png" alt="" class="circle-img">
+    <img src="./assets/microphone.png" alt="" class="hero-microphone">
+    <span class="badge">New</span>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-title">TechWave</div>
+    <p class="hero-description">
+      Your daily dose of tech insights, productivity hacks, and personal growth
+    </p>
+
+    <div class="hero-btn">
+      <a href="" class="btn hero-btn-spotify"><i class="fa-brands fa-spotify"></i> Listen on Spotify </a>
+      <a href="#" class="hero-btn-subscribe"><i class="fa-regular fa-envelope"></i> Subscribe</a>
+    </div>
+  </div>
+
+</section>
 
 
 </body>

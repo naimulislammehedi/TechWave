@@ -7,10 +7,11 @@
 
 :root {
     --bg: #1A0B2E;
-    --text: #ffffff;
+    --text: #cfc8dd;
     --muted: #cfc8dd;
     --gradient: linear-gradient(135deg, #ffd54d, #ff2d95, #6a0dd1);
     --radius: 1000px;
+    
 }
 
 /* UTILITIES */
@@ -52,7 +53,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text);
+    color: #fff;
     transition: 0.3s ease;
 }
 
@@ -87,7 +88,7 @@ body {
 }
 
 /* HERO SECTION */
-.hero {
+/* .hero {
     min-height: calc(100vh - 90px);
     background: url("../assets/hero-bg.png") center/cover no-repeat;
     display: flex;
@@ -104,7 +105,6 @@ body {
     text-align: center;
 }
 
-/* CIRCLE */
 .circle-wrapper {
     position: relative;
     width: clamp(220px, 40vw, 350px);
@@ -148,10 +148,9 @@ body {
     border-radius: var(--radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 5;
-}
+} */
 
-/* HERO CONTAIN */
-.hero-content {
+/* .hero-content {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -206,7 +205,136 @@ body {
 .hero-btn-subscribe:hover {
     transform: translateY(-2px);
     box-shadow: 0 3px 5px #00ff8859;
+} */
+
+
+
+
+
+/* MODIFIED HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-circle-wrapper {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: neon 3s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes neon {
+    0% {
+        box-shadow:
+            0 0 5px #00ff88,
+            0 0 10px #00ff88,
+            0 0 20px #00ff88;
+    }
+    50% {
+        box-shadow:
+            0 0 10px #00ff88,
+            0 0 20px #00ff88,
+            0 0 40px #00ff88;
+    }
+    100% {
+        box-shadow:
+            0 0 5px #00ff88,
+            0 0 10px #00ff88,
+            0 0 20px #00ff88;
+    }
+}
+
+.circle-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.hero-microphone {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    /* margin: 0 auto; */
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #00FF88;
+    color: #000;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px #00FF88;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    margin-top: 25rem;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    font-size: 3.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-description {
+    color: var(--text);
+    margin-bottom: 1.5rem;
+}
+
+.hero-btn-subscribe {
+    padding: 0.85rem 1.4rem;
+    border: 2px solid #00FF88;
+    border-radius: var(--radius);
+    color: #00FF88;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.hero-btn-subscribe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px #00FF88;
+}
+
 
 
 /* ABOUT SECTION */
@@ -214,6 +342,7 @@ body {
     background-color: #1A0B2E;
     padding: 6rem 1rem;
     color: #ffffff;
+    /* margin-top: 0; */
 }
 
 .about-content {
@@ -597,13 +726,11 @@ body {
     /* HERO SECTION */
     .hero {
         background-size: contain;
-        /* height: 100%; */
     }
 
-    .circle-wrapper {
+    /* .circle-wrapper {
         top: -1rem;
-        /* margin-bottom: 100px; */
-    }
+    } */
 
     .hero-title {
         font-size: 2.5rem;
@@ -614,9 +741,8 @@ body {
         /* margin-left: 0.5rem; */
     }
 
-    .hero-content h1 {
-        /* padding-top: 6rem; */
-        /* margin-top: 100%; */
+    .hero-title {
+        font-size: 2.2rem;
     }
 
     /* ABOUT SECTION */
