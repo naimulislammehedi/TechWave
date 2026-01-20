@@ -355,7 +355,13 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 1.5rem;
-    margin-bottom: 7.5rem;
+    margin-bottom: 5.5rem;
+}
+
+.featured-episodes h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .featured-episodes__grid {
@@ -456,6 +462,7 @@ body {
     text-align: center;
     font-size: 3rem;
     font-weight: 500;
+    margin-bottom: 2.5rem;
 }
 
 .host-section {
@@ -566,12 +573,41 @@ body {
     }
 
     /* FEATURES */
+.why-techwave, .featured-episodes {
+    margin-bottom: 3.5rem;
+}
+
     .grid {
         grid-template-columns: 1fr;
     }
 
     .wide {
         grid-column: span 1;
+    }
+
+    /* MEET THE HOST */
+    .host {
+        margin: 2rem;
+    }
+    .host > h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .host-section,
+    .host-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .host-name {
+        font-size: 1.5rem;
+    }
+
+    .host-sm {
+        justify-content: center;
+        align-items: center;
     }
 
 }
