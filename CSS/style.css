@@ -108,7 +108,7 @@ body {
 .circle-wrapper {
     position: relative;
     width: clamp(220px, 40vw, 350px);
-    top: 2rem;
+    top: -4rem;
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: visible;
@@ -150,6 +150,16 @@ body {
     z-index: 5;
 }
 
+/* HERO CONTAIN */
+.hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
 .hero-title {
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 800;
@@ -159,6 +169,7 @@ body {
     max-width: 620px;
     color: var(--muted);
     line-height: 1.6;
+    text-align: center;
 }
 
 .hero-btn {
@@ -315,6 +326,120 @@ body {
     grid-column: span 2;
 }
 
+/* FEATURED EPISODES */
+/* .featured-grid {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 1rem;
+}
+
+.featured-card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.featured-card iframe {
+    width: 100%;
+    height: 440px;
+    display: block;
+    pointer-events: none;
+} */
+
+
+/* FEATURED-EPISODES */
+.featured-episodes {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+.featured-episodes__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.episode-card {
+  background: #6a0dd1;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.yt-video {
+  position: relative;
+  height: 50%;
+}
+
+.yt-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.play-overlay span {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd54d, #ff2d95, #6a0dd1);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.play-overlay span::before {
+  content: "";
+  margin-left: 4px;
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.featured-content {
+  height: 50%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  max-width: 310px;
+}
+
+.featured-content p {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: #e0e0e0;
+  margin-bottom: 0.8rem;
+}
+
+.featured-content-timer {
+  /* margin-top: auto;               */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #00ff88;
+  font-size: 0.9rem;
+}
 
 /* SMALL DEVICE */
 @media (max-width: 576px) {
@@ -333,6 +458,16 @@ body {
         display: none;
     }
 
+    /* HERO SECTION */
+    .hero {
+    background-size: contain;
+    /* height: 100%; */
+}
+    .circle-wrapper {
+        top: -1rem;
+        /* margin-bottom: 100px; */
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
@@ -340,6 +475,11 @@ body {
     .btn-icon {
         font-size: 0.75rem;
         /* margin-left: 0.5rem; */
+    }
+
+    .hero-content h1 {
+        /* padding-top: 6rem; */
+        /* margin-top: 100%; */
     }
 
     /* ABOUT SECTION */
